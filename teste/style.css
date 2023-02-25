@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+}
+
+.dependentes {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.dependentes button {
+  border: none;
+  background-color: #5eb2e6;
+  color: white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: .75rem 1rem;
+}
+
+.dependentes button.green {
+  background-color: #005c54;
+  margin-top: 2rem;
+}
+
+.dependentes .container {
+  margin-top: 1rem;
+  display: grid;
+  grid-gap: .5rem;
+}
+
+.dependentes .container input {
+  padding: .5rem .75rem;
+  border: 1px solid #ccc;
+}
+
+.dependentes .container input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+.dependentes .container .dependente {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.dependentes .container .dependente .action a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  display: inline-block;
+}
+
+.dependentes .container .dependente .action a.salvar {
+  border-radius: 2px;
+  background-color: #efefef;
+  color: #005c54;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .5;
+  filter: grayscale(100%);
+}

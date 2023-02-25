@@ -1,0 +1,79 @@
+  <!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lucas Arend Maciel">
+    <title>Header</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="headers.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container fixo ">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap" /></svg>
+                </a>
+                <?php if(isset($_SESSION['login'] )) : ?>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../index/index.php" class="nav-link px-2 link-secondary">Home</a></li>
+                    <?php if($_SESSION['nivel'] == 1) : ?>
+                    <li><a href="../cadastro/cadastrar.php" class="nav-link px-2 link-dark"> Cadastrar usuário </a></li>
+                    <?php endif; ?>
+                    <?php if($_SESSION['nivel'] == 1 or $_SESSION['nivel'] == 3 ) : ?>
+                    <li><a href="../situacao/situacao.php" class="nav-link px-2 link-dark">Alterar situação</a></li>
+                    <?php endif; ?>
+                    <?php if($_SESSION['nivel'] == 1 or $_SESSION['nivel'] == 2) : ?>
+                    <li><a href="../cadastro/gerenciar_militar.php" class="nav-link px-2 link-dark"> Gerenciar militar </a></li>
+                    <?php endif; ?>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <?php echo"Bem-Vindo " .$_SESSION['login'] ?>
+                    <button type="button" href='../index/logout.php' onclick="window.location.href = '../index/logout.php'" class="btn btn-outline-primary me-2">Deslogar</button>
+                </div>
+                <?php else : ?>
+                <div class="col-md-3 text-end">
+                    <?php echo"Você precisa" ?>
+                    <button type="button" href='../login/login.html' onclick="window.location.href = '../login/login.html'" class="btn btn-outline-primary me-2">Logar</button>
+                </div>
+                <?php endelse : ?>
+                <?php endif; ?>
+            </header>
+        </div>
+        <div class="container "></div>
+
+    </main>
+
+</body>
+</html>

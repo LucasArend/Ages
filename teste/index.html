@@ -1,0 +1,19 @@
+<a href="#" data-id="1" id="adicionarCampo">+ adicionar campo</a>
+
+<form method="POST" action="gerarpdf.php" target="_blank">
+    <div id="formulario">
+        <input type="text" placeholder="Nº do Documento" maxlength="6" name="numeroDocumento" required />
+        <select name="tipoDocumento" required>
+            <option value="" disabled selected>Tipo do Documento</option>
+            <option value="01">Volvo</option>
+            <option value="02">Saab</option>
+        </select>
+        <select name="subTipoDocumento" required>
+            <option value="" disabled selected>Subtipo do Documento</option>
+            <option value="01">Volvo</option>
+            <option value="02">Saab</option>
+        </select>
+    </div>
+    <input type="submit" value="Gerar Código" />
+</form>
+<script src="main.js"></script>

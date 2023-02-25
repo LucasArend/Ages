@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html data-lt-installed="true"><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Adicionar / Remover campos dinamicamente</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="a_data/dummy.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="a_data/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      body{
+  font-family: sans-serif;  
+}
+
+.dependentes{
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.dependentes button{
+  border: none;
+  background-color: #5eb2e6;
+  color: white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: .75rem 1rem;
+}
+.dependentes button.green{
+  background-color: #005c54;
+  margin-top: 2rem;
+}
+
+.dependentes .container{
+  margin-top: 1rem;
+  display: grid;
+  grid-gap: .5rem;
+}
+
+.dependentes .container input{
+  padding: .5rem .75rem;
+  border: 1px solid #ccc;
+}
+
+.dependentes .container input:focus{
+  border: 1px solid black;
+  outline: none;
+}
+
+.dependentes .container .dependente{
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.dependentes .container .dependente .action a{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  display: inline-block;
+}
+
+.dependentes .container .dependente .action a.salvar{
+  border-radius: 2px;
+  background-color: #efefef;
+  color: #005c54;
+}
+
+.disabled{
+  pointer-events: none;
+  opacity: .5;
+  filter: grayscale(100%);
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+    <div class="dependentes">
+  <button id="btnAdicionarDependentes">
+  📝Adicionar Dependentes
+  </button>
+  <div class="container" id="dependentesContainer">
+    <div class="dependente" data-id="">
+        <input class="nome" placeholder="Digite o nome" type="text">
+        <input class="idade" placeholder="Digite a idade" type="number">
+            <div class="action">
+            <a href="#" class="salvar">salvar 💾</a>
+            <a href="#" class="remover">❌</a>
+	        </div>
+	</div>
+  </div>
+  <button class="green" id="btnCapturarDados">
+  ✅ Capturar Dados
+  </button>
+</div>
+<pre id="containerDados"></pre>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+var dependentes = [{
+	identificador: "",
+  nome: "",
+  idade: "",
+}];
+
+
+function carregarDependentes(){
+	let dependentes_container = document.querySelector("#dependentesContainer");
+  		dependentes_container.innerHTML = "";
+  dependentes.forEach((el)=>{
+  	let identificador = el.identificador;
+  	let nome = el.nome;
+    let idade = el.idade;
+    let dependente_container = `<div class="dependente" data-id="${identificador}">
+    															<input class="nome" placeholder="Digite o nome" type="text" value="${nome}"/>
+                                  <input class="idade" placeholder="Digite a idade" type="number" value="${idade}"/>
+                                  <div class="action">
+                                  	<a href="#" class="salvar">salvar 💾</a>
+                                    <a href="#" class="remover">❌</a>
+																	</div>
+															  </div>`;
+  	dependentes_container.innerHTML += dependente_container;
+  });
+  salvarDependentes();
+  removerDependentes();
+  travarOutros(false);
+}
+
+function removerDependentes(){
+	document.querySelectorAll("#dependentesContainer .remover").forEach((el, i)=>{
+  	el.addEventListener("click", ()=>{
+  		dependentes.splice(i, 1);  	
+      carregarDependentes();
+    });
+  });
+}
+
+function adicionarDependentes(){
+  dependentes.push({identificador:"", nome:"", idade: ""});
+  carregarDependentes();
+  travarOutros(document.querySelector("#dependentesContainer > div:last-child"));
+}
+
+function salvarDependentes(){
+		document.querySelectorAll("#dependentesContainer .salvar").forEach((el, i)=>{
+  	el.addEventListener("click", ()=>{
+      let identificador = el.parentElement.parentElement.getAttribute("data-id");
+      let nome = el.parentElement.parentElement.querySelector(".nome").value;
+      let idade = el.parentElement.parentElement.querySelector(".idade").value;
+    	
+      if(!nome.length || !idade.length){
+      	alert("Nome e idade precisam ser preenchidos para salvar.");
+        return false;
+      }
+  		dependentes.splice(i, 1, {identificador: identificador, nome: nome, idade: idade});
+      carregarDependentes();
+      travarOutros(false);
+    });
+  });
+}
+
+function travarOutros(element){
+	if(element == false){
+  	document.querySelectorAll(".dependentes button, .dependentes .container > div").forEach((el)=>{
+    	el.classList.remove("disabled");
+    });
+    document.querySelector("#containerDados").innerHTML = "";
+    return false;
+  }
+  document.querySelectorAll(".dependentes button, .dependentes .container > div").forEach((el)=>{
+  	if(el != element){
+    	el.classList.add("disabled");
+    }
+  });
+}
+
+//init
+document.querySelector("#btnAdicionarDependentes").addEventListener("click", adicionarDependentes);
+carregarDependentes();
+
+//capturarDados
+document.querySelector("#btnCapturarDados").addEventListener("click", ()=>{
+	document.querySelector("#containerDados").innerHTML = JSON.stringify(dependentes, undefined, 4);
+});
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "o1Lha6xu"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+
+
+</body>
+</html>
