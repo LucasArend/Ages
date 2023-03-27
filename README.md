@@ -20,9 +20,10 @@ E por esse motivo criei o AGES com o intuito de ser um sistema que reúna todas 
 
 ### Backend
   - php
-  - Javascript
 
 ### Frontend
+  - css
+  - html
   - bootstrap
   - Javascript
 
