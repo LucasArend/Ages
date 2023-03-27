@@ -35,7 +35,9 @@ o sistema ainda não está totalmente pronto, porem grande parte das funcionalid
 
 🔥
 
-Abaixo algumas imagens do sistema para ter uma ideia de seu funcionamento para não precisar monta-lo
+Abaixo algumas imagens do sistema para ter uma ideia de seu funcionamento
+
+(Nomes ficticios para apresentação)
 
 
 ![image](https://user-images.githubusercontent.com/54964204/228043173-8d36a827-83b6-4c33-9e3d-35eb0954571d.png)
