@@ -40,4 +40,21 @@ Abaixo algumas imagens do sistema para ter uma ideia de seu funcionamento para n
 
 ![image](https://user-images.githubusercontent.com/54964204/228043173-8d36a827-83b6-4c33-9e3d-35eb0954571d.png)
 
+![image](https://user-images.githubusercontent.com/54964204/228043295-35df3e8c-28b5-4f6f-bfbc-0ac3fb07c78f.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043361-12a6155d-e332-499d-91fa-bc1f36150559.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043443-47a90ecf-008f-4e70-818d-5718b0a3e905.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043527-779b956b-b734-42b8-a494-94e4b15787f5.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043575-81566120-3a32-4ed1-9bfe-1070fc759f22.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043628-f00118d0-23f3-4982-8267-9b9cf4c95f19.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043678-303567fc-9ed9-4a7e-96e3-e5beed5f69f9.png)
+
+![image](https://user-images.githubusercontent.com/54964204/228043755-eab1801e-9761-44dd-a144-92d69a49cf54.png)
+
+
 
