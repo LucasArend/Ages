@@ -5,14 +5,12 @@
   AGES • 🤖
 </h2>
 
-Meu primeiro programa Fullstack que desenvolvi para agilizar o trabalho das sargenteações do 3ºBatalhão de engenharia e combate
-Não é a versão completa, falta um pequeno detalhe no backend que fiz às pressas na versão que está em produção e estou arrumando nesta nova versão
+Desde o inicio do exército as tropas foram divididas em pelotões de acordo com suas especialidades e estes foram divididos em companhias que abrigavam os pelotões com atividades similares, com o crescimento da instituição houve a necessidade da criação de um meio para administrar o andamento das tarefas, assim como ajustar de maneira justa a distribuição das mesmas e zelar pelos direitos dos integrantes, assim surgiu a sargenteação, uma seção administrativa onde é dado o início de toda documentação relativa aos militares vinculados à companhia, entre estes, se destaca a necessidade de escalas de serviço, neste a companhia é responsável para enviar uma determinada quantia de militares entre soldados, cabos e sargentos para compor a guarnição no dia seguinte, para isso é necessário revisar quais estão a mais tempo sem tirar serviço, se estão em missões ou fora do aquartelamento por algum motivo. São responsáveis também por darem início às sindicâncias,este é um processo administrativo que tem por objetivo através de atos e diligências apurar a verdade de fatos alegados, Além de outras tarefas que são atribuídas pelo comandante da companhia.
 
-O objetivo do AGES é automatizar a escala de serviço dos militares das companhias e futuramente conversar com os demais sistemas da organização militar
-atualmente existem muitos sistemas que tornam as informações redundantes fazendo assim que algumas tarefas se tornem anti-produtivas
-visto isso pretendo ainda, sincronizar os militares com problemas de saúde com o sistema e remove-los da geração automática de escala até estarem recuperados
-automatizar a passagem de cargo dos militares de serviço para a suas respectivas funções
-tratar os dados necessários para os "2%" que os militares em missão possuem direito e documentar todas as modificações feitas
+Com isso surgiu o problema. Como tornar mais eficiente o processo de confecção de documentação e controle de escala e de efetivo no âmbito do 3º Batalhão de Engenharia de Combate?
+
+E por esse motivo criei o AGES com o intuito de ser um sistema que reúna todas as informações dos integrantes da companhia eliminando a necessidade de procura em livros, automatizar o modo que é feito as escalas utilizando esses sistema como base e auxiliar a forma que as informações chegam à sargenteação.
+
 
 
 <!-- <p align="center">
@@ -32,8 +30,7 @@ tratar os dados necessários para os "2%" que os militares em missão possuem di
 ### PS:
 
 Como foi algo feito antes de aprender boas práticas está um pouco bagunçado mas estou melhorando este quesito também em versões futuras
-Como não estou mais no quartel e sou o único trabalhando no projeto como hobbie, possíveis atualizações podem demorar
-Ainda mais agora que estou focando em outros projetos.
+o sistema ainda não está totalmente pronto, porem grande parte das funcionalidades ja podem ser utilizadas.
 
 🔥
 
