@@ -14,7 +14,7 @@
                 if($u->logar($login,$senha)){
                   header("location: ../index/index.php");
                 }else{
-                    echo "<script language='javascript' type='text/javascript'>alert('Não foi possivel logar no sistema!')</script>";
+                    echo "<script language='javascript' type='text/javascript'>alert('Nï¿½o foi possivel logar no sistema!')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='login.html';</script>";
                 }
             }else{ 
